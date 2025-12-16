@@ -60,7 +60,7 @@ console.log(double(1)); // -> 2
 
 ### name
 
-`name` is a required field used to specify the name of the UMD library, corresponding to Rspack's [output.library.name](https://rspack.dev/config/output#outputlibraryname) option.
+`name` is a required field used to specify the name of the UMD library, corresponding to Rspack's [output.library.name](https://rspack.rs/config/output#outputlibraryname) option.
 
 - **Type:** `string`
 - **Example:**
@@ -193,7 +193,7 @@ export default {
 };
 ```
 
-Note that the UMD plugin does not disable splits caused by dynamic imports. If you need to disable this, you can set the Rspack's [output.asyncChunks](https://rspack.dev/config/output#outputasyncchunks) option to `false`:
+Note that the UMD plugin does not disable splits caused by dynamic imports. If you need to disable this, you can set the Rspack's [output.asyncChunks](https://rspack.rs/config/output#outputasyncchunks) option to `false`:
 
 ```js
 export default {
