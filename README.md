@@ -130,7 +130,7 @@ export default {
 
 ## Debugging in the Browser
 
-You can run the `rsbuild dev` command to debug UMD outputs in the browser.
+You can run the `rsbuild` command to debug UMD outputs in the browser.
 
 First, create `src/index.html` and add the following code:
 
@@ -157,7 +157,7 @@ export default {
 };
 ```
 
-Finally, run `npx rsbuild dev` to start.
+Finally, run `npx rsbuild` to start.
 
 ## HTML Generation
 
