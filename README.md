@@ -23,7 +23,7 @@ Add plugin to your `rsbuild.config.ts`:
 
 ```ts
 // rsbuild.config.ts
-import { pluginUmd } from "@rsbuild/plugin-umd";
+import { pluginUmd } from '@rsbuild/plugin-umd';
 
 export default {
   plugins: [pluginUmd()],
@@ -51,7 +51,7 @@ console.log(window.myLib.double(1)); // -> 2
 - When loading in Node.js, you can import it directly using `require`, for example:
 
 ```js
-const { double } = require("./dist/index.js");
+const { double } = require('./dist/index.js');
 
 console.log(double(1)); // -> 2
 ```
@@ -67,7 +67,7 @@ console.log(double(1)); // -> 2
 
 ```js
 pluginUmd({
-  name: "foo", // accessed through window.foo
+  name: 'foo', // accessed through window.foo
 });
 ```
 
@@ -81,8 +81,8 @@ Specifies which export to use as the content of the UMD library. By default, `ex
 
 ```js
 pluginUmd({
-  name: "foo",
-  export: "default",
+  name: 'foo',
+  export: 'default',
 });
 ```
 
@@ -90,8 +90,8 @@ pluginUmd({
 
 ```js
 pluginUmd({
-  name: "foo",
-  export: ["default", "subModule"],
+  name: 'foo',
+  export: ['default', 'subModule'],
 });
 ```
 
@@ -112,7 +112,7 @@ For example, output a `dist/myLib.js` file:
 export default {
   output: {
     filename: {
-      js: "myLib.js",
+      js: 'myLib.js',
     },
   },
 };
@@ -150,9 +150,9 @@ Then, specify the `template` in `rsbuild.config.ts`:
 
 ```ts title="rsbuild.config.ts"
 export default {
-  plugins: [pluginUmd({ name: "myLib" })],
+  plugins: [pluginUmd({ name: 'myLib' })],
   html: {
-    template: "./src/index.html",
+    template: './src/index.html',
   },
 };
 ```
@@ -167,9 +167,9 @@ If you need to generate HTML files, you can set [tools.htmlPlugin](https://rsbui
 
 ```ts title="rsbuild.config.ts"
 export default {
-  plugins: [pluginUmd({ name: "myLib" })],
+  plugins: [pluginUmd({ name: 'myLib' })],
   html: {
-    template: "./src/index.html",
+    template: './src/index.html',
   },
   tools: {
     htmlPlugin: true,
@@ -187,7 +187,7 @@ If you need to split the UMD outputs, you can actively configure [performance.ch
 export default {
   performance: {
     chunkSplit: {
-      strategy: "split-by-experience",
+      strategy: 'split-by-experience',
     },
   },
 };
