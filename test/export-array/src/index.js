@@ -1,5 +1,5 @@
 export default {
-	subModule(a) {
-		return a * 2;
-	},
+  subModule(a) {
+    return a * 2;
+  },
 };
