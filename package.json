@@ -1,6 +1,6 @@
 {
   "name": "@rsbuild/plugin-umd",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "repository": "https://github.com/rstackjs/rsbuild-plugin-umd",
   "license": "MIT",
   "type": "module",
