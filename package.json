@@ -2,6 +2,10 @@
   "name": "@rsbuild/plugin-umd",
   "version": "1.0.7",
   "repository": "https://github.com/rstackjs/rsbuild-plugin-umd",
+  "homepage": "https://github.com/rstackjs/rsbuild-plugin-umd#readme",
+  "bugs": {
+    "url": "https://github.com/rstackjs/rsbuild-plugin-umd/issues"
+  },
   "license": "MIT",
   "type": "module",
   "exports": {
