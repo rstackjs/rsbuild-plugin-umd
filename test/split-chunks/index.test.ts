@@ -7,15 +7,17 @@ test('should allow to configure split chunks with UMD plugin', async ({
   page,
 }) => {
   const rsbuild = await createRsbuild({
-    cwd: __dirname,
-    rsbuildConfig: (await loadConfig({ cwd: __dirname })).content,
+    cwd: import.meta.dirname,
+    rsbuildConfig: (await loadConfig({ cwd: import.meta.dirname })).content,
   });
 
   await rsbuild.build();
   const { server, urls } = await rsbuild.preview();
 
-  expect(existsSync(join(__dirname, 'dist/index.js'))).toBeTruthy();
-  expect(existsSync(join(__dirname, 'dist/lib-react.js'))).toBeTruthy();
+  expect(existsSync(join(import.meta.dirname, 'dist/index.js'))).toBeTruthy();
+  expect(
+    existsSync(join(import.meta.dirname, 'dist/lib-react.js')),
+  ).toBeTruthy();
 
   // Browser env
   await page.goto(urls[0]);
