@@ -1,12 +1,15 @@
 import { writeFileSync } from 'node:fs';
+import { createRequire } from 'node:module';
 import { join } from 'node:path';
 import { expect, test } from '@playwright/test';
 import { createRsbuild, loadConfig } from '@rsbuild/core';
 
+const require = createRequire(import.meta.url);
+
 test('should generate UMD bundle correctly', async ({ page }) => {
   const rsbuild = await createRsbuild({
-    cwd: __dirname,
-    rsbuildConfig: (await loadConfig({ cwd: __dirname })).content,
+    cwd: import.meta.dirname,
+    rsbuildConfig: (await loadConfig({ cwd: import.meta.dirname })).content,
   });
 
   await rsbuild.build();
@@ -20,7 +23,7 @@ test('should generate UMD bundle correctly', async ({ page }) => {
 
   // Node.js env
   writeFileSync(
-    join(__dirname, 'dist/package.json'),
+    join(import.meta.dirname, 'dist/package.json'),
     JSON.stringify({ type: 'commonjs' }),
   );
   const { double } = require('./dist/index.js');
