@@ -1,7 +1,7 @@
 import { writeFileSync } from 'node:fs';
 import { createRequire } from 'node:module';
 import { join } from 'node:path';
-import { expect, test } from '@playwright/test';
+import { expect, test } from '@rstest/playwright';
 import { createRsbuild, loadConfig } from '@rsbuild/core';
 
 const require = createRequire(import.meta.url);
