@@ -1,6 +1,6 @@
 import { existsSync } from 'node:fs';
 import { join } from 'node:path';
-import { expect, test } from '@playwright/test';
+import { expect, test } from '@rstest/playwright';
 import { createRsbuild, loadConfig } from '@rsbuild/core';
 
 test('should allow to configure split chunks with UMD plugin', async ({
