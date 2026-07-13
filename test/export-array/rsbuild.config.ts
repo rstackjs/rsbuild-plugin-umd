@@ -1,6 +1,6 @@
 import { defineConfig } from '@rsbuild/core';
 import { pluginUmd } from '../../dist';
-import { getRandomPort } from '../helper';
+import { getRandomPort } from '@rstackjs/test-utils';
 
 export default defineConfig({
   plugins: [
@@ -16,6 +16,6 @@ export default defineConfig({
     htmlPlugin: true,
   },
   server: {
-    port: getRandomPort(),
+    port: await getRandomPort(),
   },
 });
