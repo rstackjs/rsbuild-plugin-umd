@@ -22,6 +22,6 @@ export default defineConfig({
     },
   },
   server: {
-    port: getRandomPort(),
+    port: await getRandomPort(),
   },
 });

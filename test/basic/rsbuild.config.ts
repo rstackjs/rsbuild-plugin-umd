@@ -15,6 +15,6 @@ export default defineConfig({
     htmlPlugin: true,
   },
   server: {
-    port: getRandomPort(),
+    port: await getRandomPort(),
   },
 });
