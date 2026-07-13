@@ -1,7 +1,7 @@
 import { defineConfig } from '@rsbuild/core';
 import { pluginReact } from '@rsbuild/plugin-react';
 import { pluginUmd } from '../../dist';
-import { getRandomPort } from '../helper';
+import { getRandomPort } from '@rstackjs/test-utils';
 
 export default defineConfig({
   plugins: [
