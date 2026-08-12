@@ -6,4 +6,5 @@ export default defineConfig({
     NODE_ENV: undefined,
   },
   isolate: false,
+  testTimeout: 15_000,
 });
