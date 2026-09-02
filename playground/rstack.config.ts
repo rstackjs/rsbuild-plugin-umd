@@ -1,7 +1,8 @@
-import { defineConfig } from '@rsbuild/core';
-import { pluginUmd } from '../src';
+// Configuration guide: https://rstack.rs/config
+import { define } from 'rstack';
+import { pluginUmd } from '../src/index.ts';
 
-export default defineConfig({
+define.app({
   plugins: [
     pluginUmd({
       name: 'myLib',
