@@ -19,6 +19,10 @@ export default defineConfig({
   performance: {
     chunkSplit: {
       strategy: 'split-by-experience',
+      override: {
+        // Allow splitting React even when the remaining entry is very small.
+        minRemainingSize: 0,
+      },
     },
   },
   server: {
